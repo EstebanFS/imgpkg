@@ -1,0 +1,25 @@
+---
+apiVersion: data.packaging.carvel.dev/v1alpha1
+kind: Package
+metadata:
+  name: flux.source.controller.apps.tanzu.vmware.com.0.16.0
+spec:
+  refName: flux.source.controller.apps.tanzu.vmware.com
+  version: 0.16.0
+  releaseNotes: |
+        Initial release of the simple flux source controller
+  template:
+    spec:
+      fetch:
+      - imgpkgBundle:
+          image: eforondavmware/flux-source-controller-app:0.16.0
+      template:
+      - ytt:
+          paths:
+          - "config/"
+      - kbld:
+          paths:
+          - "-"
+          - ".imgpkg/images.yml"
+      deploy:
+      - kapp: {}

@@ -1,0 +1,9 @@
+---
+apiVersion: packaging.carvel.dev/v1alpha1
+kind: PackageRepository
+metadata:
+  name: flux-source-controller-repository
+spec:
+  fetch:
+    imgpkgBundle:
+      image: eforondavmware/my-pkg-repo:1.0.0

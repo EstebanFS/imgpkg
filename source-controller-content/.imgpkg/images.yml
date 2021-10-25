@@ -1,0 +1,11 @@
+---
+apiVersion: imgpkg.carvel.dev/v1alpha1
+images:
+- annotations:
+    kbld.carvel.dev/id: index.docker.io/eforondavmware/test-flux:v0.16.0
+    kbld.carvel.dev/origins: |
+      - resolved:
+          tag: v0.16.0
+          url: index.docker.io/eforondavmware/test-flux:v0.16.0
+  image: index.docker.io/eforondavmware/test-flux@sha256:1eba31c973e3c8362b7647d6986596ea27fefa8d529e149ff3ab85c753883c4a
+kind: ImagesLock

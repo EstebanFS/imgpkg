@@ -1,0 +1,11 @@
+---
+apiVersion: imgpkg.carvel.dev/v1alpha1
+images:
+- annotations:
+    kbld.carvel.dev/id: eforondavmware/flux-source-controller-app:0.16.0
+    kbld.carvel.dev/origins: |
+      - resolved:
+          tag: 0.16.0
+          url: eforondavmware/flux-source-controller-app:0.16.0
+  image: index.docker.io/eforondavmware/flux-source-controller-app@sha256:28ae77031226c07b2c5ef8612b0df5464e32fccdb6478232ec6319c5fe6438a9
+kind: ImagesLock
